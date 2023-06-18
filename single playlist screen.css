@@ -1,0 +1,899 @@
+/* this is the styleheet of single playlist.html page */
+
+
+
+/* here i have provided general background-color of playlist items used in both aside sections of main section */
+    :root {
+        --playlist-items-background-color: #1a1e33;
+        --playlist-items-background-color-on-hover: #2e3249;
+        }
+        /* this is background-color of my whole page */
+            body{
+            background-color: rgb(10, 10, 36);
+        }
+        /* i have divided whole page into three broad sections-header,main and footer */
+        /* first section-"header" begins here */
+        header{
+            background-color: rgb(10, 10, 36);
+            display:flex;
+            width:100%;
+            height:60px;
+            color:whitesmoke;
+            position:fixed;
+            z-index:10;
+            top:0;
+            padding-left:1%;
+            padding-right:1%;
+        }
+        /* i have further divided header into three parts-left,mid and right */
+        /* styling for left part of header starts here */
+        .left_head {
+            width:85px;   
+        }
+        .left_head img {
+            display:inline-block;
+            height:38px;
+            margin:15px 10px;
+            animation-name:heartBeat;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        /* styling of middle part of header starts here */
+        .mid_head {
+            font-size:20px;
+            margin:11px 4px;
+            width:100px;
+            height:100%;
+            background: linear-gradient(to bottom,
+                        #c72878 20%, #bbac2a);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+        }
+        .mid_head span{
+            position:relative;
+            top:-18px;
+            margin-left:200px;
+            font-size:16px;
+            background: linear-gradient(to right, #f32170,
+                        #ff6b08, #cf23cf, #eedd44);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+        }
+       /* styling of right part of head starts here */
+        .right_head {
+            position: relative;
+            width:700px;
+            top:-16px;
+            /* margin-left:-160px; */
+            left:480px;
+        }
+        .right_head input[type="text"]{
+            background-image:url(search_icon.png),url(mic_icon.png);
+            background-color:rgb(39, 39, 83);
+            background-repeat: no-repeat;
+            background-size:21px,17px;
+            background-position:left,right ;
+            border-radius: 12px;
+            position:relative;
+            height:22px;
+            width:200px;
+        }
+        .right_head input[placeholder]{
+            padding-left: 40px;
+            font-size:15px;
+        }
+        .right_head input:focus{
+            background-image:none;
+        }
+        .sear:hover{
+            border-radius: 20px;
+            border-color:skyblue;
+            cursor: pointer;
+            color: chartreuse;
+            transition: 0.5s;
+        }
+        .right_head i{
+            font-size:22px;
+            margin-left:10px;
+            position:relative;
+            left:100px;
+            animation-name:ringing_bell;
+            animation-duration:0.5s ;
+            animation-iteration-count: infinite;
+        }
+        /* animation of bell icon used in right part of header */
+        @keyframes ringing_bell {
+            0%{
+                transform: rotate(0deg);
+            }
+            33%{
+                transform:rotate(15deg);
+            }
+            67%{
+                transform:rotate(0deg);
+            }
+            100%{
+                transform:rotate(-15deg);
+            }
+        }
+        .right_head img{
+            border-radius:50%;
+            height:50px;
+            width:60px;
+            position: relative;
+            left:160px;
+            top:28px; 
+        }
+    /* header ends here */
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    
+        /* main section starts here*/
+    main {
+        width: 100%;
+        padding: 0% 3%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        transition: all ease-in-out 1s;
+    }
+    /* there are two aside sections both of them will have this class 
+    (I have taken care of the re-usability of the classes and removed redundancy) */
+    .aside {
+        display: inline-block;
+        overflow: hidden;
+    }
+    /* section one of the main part */
+    .section-1 {
+        width: 65%;
+        height: 102vh;
+        overflow: scroll;
+    }
+    /* overflow should be scrollable but the scroll bar should be hidden*/
+    .section-1::-webkit-scrollbar {
+        display: none;
+    }
+    /* section 2 of the main part */
+    .section-2 {
+        width: 28%;
+        height: 102vh;
+        z-index: 2;
+        /* border:1px solid seagreen; */
+    }
+    /* aside section 1 */
+    .jumbotron {
+        /* border:1px solid lightgreen; */
+        height: 20vw;
+        width: 100%;
+        margin-top: 12px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(14, 14, 48);
+        margin-bottom: 40px;
+        position: relative;
+        border:1px solid transparent;
+        border-radius:5%;
+    }
+    /* image insider jumbotron */
+    .jumbotron-image {
+        height: 20vw;
+        width: 20vw;
+         background-image: linear-gradient(
+                to left ,
+                transparent,
+            65%,rgba(20, 27, 65, 1)
+             ),url(guitar4.jpg); 
+        background-size: cover;
+        border:1px transparent;
+        border-radius:5%;
+    }
+    /* right part of the jumbotron */
+    .jumbotron-detail {
+        width: 67%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        padding-right: 12px;
+        padding-left:7px;
+        padding-top:0 px;
+        padding-bottom:0px;
+        margin-bottom:11px;
+        color:whitesmoke;
+    }
+    /* descriptive part contains the descripton of the song and action part contains the follow and play buttons */
+    .descriptive-part,
+    .action-part {
+        width: 100%;
+        height: max-content;
+    }
+    /* song name and followers */
+    .song-name-main,
+    .followers {
+        display: inline-block;
+    }
+    /* song name heading properties */
+    .song-name-main h1 {
+        font-size: 2vw;
+    }
+    /* follower count */
+    .followers {
+        position: absolute;
+        right: 0%;
+        top: 5%;
+    }
+    /* self explanatory */
+    .followers,
+    .author {
+        font-size: 1.5vw;
+    }
+    /* description of the jumbotron */
+    .desc {
+        font-size: 1vw;
+    }
+    .action-part p {
+        font-size: 1vw;
+    }
+    form > button {
+        border: 0px;
+        height: 2.5vw;
+        width: 10vw;
+        color: white;
+        font-size: 1.2vw;
+    }
+    /* play button */
+    form > button:nth-child(1) {
+        background-image: linear-gradient(to bottom right,#c72878 , #beb13d);
+    }
+    form > button:nth-child(1):hover {
+        background-image: linear-gradient(to bottom right,#c72878 , #beb13d);
+        opacity:0.8;
+    }
+    /* follow button */
+    form > button:nth-child(2) {
+        background-color: transparent;
+        /* background-image: linear-gradient(to bottom right, #beb13d,#c72878 ); */
+    }
+    form > button:nth-child(2):hover{
+        opacity:0.7;
+    }
+    
+    
+    
+    /* second part of aside section-1 */
+    /* particular item in the playlist */
+    .playlist-item {
+        height: 8vh;
+        color:white;
+        box-sizing: border-box;
+        background-color: var(--playlist-items-background-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+    /* playlist item hovering effects */
+    .playlist-item:hover {
+        background-color: var(--playlist-items-background-color-on-hover);
+    }
+    /* left part of the playlist item */
+    .left {
+        display: flex;
+        flex-direction: row;
+        /* justify-content: flex-start; */
+        align-items: center;
+        width: 30%;
+        height: 100%;
+        padding: 0% 1%;
+    }
+    .left > div:nth-child(2) {
+        height: 100%;
+        min-width: 50px;
+        max-width: 50px;
+        margin: 0px 12% 0px 12%;
+        position: relative;
+    }
+    .left > div:nth-child(2) img {
+        width: 100%;
+        height: 100%;
+    }
+    .left > div:nth-child(3) p {
+        color: grey;
+    }
+    .left > div:nth-child(3) .play_head {
+        color: white;
+    }
+    .left .play_head{
+        margin-top:10px;
+        font-size: 16px;
+        font-weight:bold;
+    }
+    .left  p {
+        font-size: 10px;
+    }
+    /* center part of the playlist item which contains the duration length of the song */
+    .center {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: min-content;
+        height: 100%;
+    }
+    .center {
+        font-size: 10px;
+        color: grey;
+    }
+    /* right part of the playlist item, which contains icons */
+    .right {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 100%;
+        padding-right: 2%;
+    }
+    .right {
+        color: grey;
+    }
+    .right div:nth-child(2) {
+        margin-left: 27%;
+    }
+    /* adding animation to icon in aside section 1 and in recently played section of aside section-2 */
+    @keyframes glowing-heart {
+        0% {
+            color: yellow;
+        }
+        50% {
+            color: orangered;
+        }
+        100% {
+            color: red;
+        }
+    }
+    
+    .playlist-item:hover .fa-heart {
+        animation-name: glowing-heart;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 1s;
+    }
+    /* animation given to plus icon */
+    @keyframes coloured-plus {
+        0% {
+            color: red;
+        }
+        33% {
+            color: orangered;
+        }
+        100% {
+            color: yellow;
+        }
+    }
+    
+    .playlist-item:hover .fa-plus {
+        animation-name: coloured-plus;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 1s;
+    }
+    /* adding trnsition to playlist item */
+    .playlist-item:hover {
+        transform:translate(16px,0);
+        transition:transform 0.5s;;
+    }
+    /* customizing the play button */
+    .play-btn {
+        background-color: rgb(31, 19, 19);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        opacity: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transition: all ease-in-out 0.1s;
+    }
+    /* on hover effects */
+    .play-btn:hover {
+        opacity: 0.7;
+    }
+    /* styling of aside section-1 ends here */
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/   
+    /*/////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    
+    
+    
+    
+    /* ASIDE SECTION -2  starts here*/
+    /* this is the first section heading of the aside section 2 */
+    .section-heading {
+        margin-top: 0px;
+        position: relative;
+        margin-bottom: 8px;
+        left:5px;
+        color:white;
+    }
+    /* adjusting for side by side display */
+    .section-heading div,
+    .section-heading h1 {
+        display: inline-block;
+    }
+    .section-heading h1 {
+        font-size: 23px;
+    }
+    .section-heading div {
+        position: absolute;
+        bottom: 0%;
+        right: 0px;
+        font-size: 15px;
+        right:8px;
+    }
+    
+    
+    .list {
+        height: 38vh;
+        overflow: scroll;
+    }
+    /* hiding the scrollbar */
+    .list::-webkit-scrollbar {
+        display: none;
+    }
+    /* this is particular item in the "list  container*/
+    .list-item {
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    /* hovering effect for the list item */
+    .list-item:hover {
+        background-color: var(--playlist-items-background-color-on-hover);
+    }
+    /* adjusting the name and image of the songs relative to their original position */
+    .list-item > div:nth-child(1) {
+        width: 100px;
+        height: 100%;
+        position: relative;
+    } 
+    .list-item > div:nth-child(1) > img {
+        width: 100%;
+        height: 100%;
+    }
+    .list-item > div:nth-child(2) > .list_head{
+        width:200px;
+    }
+    .author-name {
+        font-size: 13px;
+        color: grey;
+    }
+    .extra {
+        text-align: right;
+        height: 100%;
+        font-size: 17px;
+        margin-right:2px;
+        color:grey;
+    }
+    /* animation given to three dots in right part of each list item */
+    .list-item:hover .extra div{
+        animation-name:tada;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        background: linear-gradient(to right,
+                        #c72878 30%, #bbac2a);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+    }
+    .list_head{
+        font-size:21px;
+        color:white;
+    }
+    .list_header{
+        width:200px;
+        color:white;
+        font-size:16px;
+        margin-top:10px;
+    }
+    .playlist-item .left p{
+        margin-top:3px;
+    }
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    
+    
+    /* Footer section starts here*/
+    footer {
+        position:sticky;
+        bottom: 1px;
+    
+        width: 92%;
+        height: 60px;
+        margin:auto;
+        background-image: linear-gradient(to right, #f02774,
+                        #f1680c, #cabe52);
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: nowrap;
+        padding: 0px 3%;
+        box-sizing: border-box;
+        z-index: 6;
+        margin-top: 5px;
+    }
+    /* footer is divided into 3 parts */
+    /* 1. first part of the footer */
+    .active_song_description {
+        height: 100%;
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    /* the current song which is being played, this is the image container for that. */
+    #song_image {
+        width: 62px;
+        height: 62px;
+        min-width: 62px;
+        min-height: 62px;
+    
+    }
+    /* current song image */
+    #song_image img {
+        width: 100%;
+        height: 100%;
+    }
+    /* heart and ban icon */
+    .heart_and_ban_icon {
+        height: 100%;
+        padding-top: 4%;
+        border:1px solid transparent;
+        border-radius: 50%;
+    }
+    /* song decscription */
+    .song_desc {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+    /* song name */
+    .song_desc div:nth-child(1) {
+        font-size: 18px;
+    }
+    /* song author */
+    .song_desc div:nth-child(2) {
+        font-size: 12px;
+    }
+    
+    /* 2. Second part of the footer*/
+    .player {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    /* controls is the container for all the center controls of the player */
+    .controls {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+    }
+    /* this is the song-duration slider */
+    #slider {
+        width: 100%;
+        font-size: 13px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    
+    .time {
+        margin: 0px 10px;
+    }
+    
+    /* adjusting the slider for better visuals */
+    .slidecontainer {
+        width: 100%;
+    }
+    /* for audio and main center player */
+    .slider {
+        width: 100%;
+        height: 5px;
+        opacity: 0.6;	
+    }
+    /* hover effect for the slider */
+    .slider:hover {
+        opacity: 1;
+    }
+    /* third part of the footer */
+    /* this contains the extra icons and slider for volume */
+    /* this is also a container */
+    .extras {
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    /* footer ends here */
+    
+    
+    
+    
+    
+    
+    /* "more" button properties */
+    label {
+        display: none;
+        position: absolute;
+        right: 0%;
+        top: 20%;
+        padding-bottom: 5px;
+        z-index: 3;
+        box-shadow: 0px 0px 2px 1px white;;
+        width: 70px;
+        font-size: 20px;
+        height: 21px;
+        text-align: center;
+        background-image: linear-gradient(to bottom right,#c72878 , #beb13d);
+    }
+    /* on a normal display, it will be hidden */
+    label ~ input {
+        display: none;
+    }
+    /* styling of more button ends here */
+    
+    
+    /* media queries for whole page in order to make it responsive */
+    @media screen and (max-width: 1200px) {
+        /* favourites text will be hidden for this viewport width*/
+        .mid_head span {
+            display: none !important;
+        }
+        /* reduced size of search bar */
+        .sear {
+            width: 30%;
+        }
+        input {
+            font-size: 11px !important;
+        }
+        /* main heading in jumbotron */
+        .song-name-main h1 {
+            font-size: 2.4vw;
+        }
+        /* jumbotron description */
+        .desc {
+            font-size: 1.2vw;
+        }
+    }
+    @media screen and (max-width: 900px) {
+        /* jumbotron description */
+        .desc {
+            font-size: 1.6vw;
+        }
+        /* more button will ve visible and section 2 will be hidden by default for this viewport */
+        label {
+            display: block;
+        }
+        /* hidden section 2 by default */
+        .section-2 {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            width: 300px;
+            height: 68vh;
+            background-color: #050043;
+            box-shadow: 0px 0px 2px 1px white;
+            right: 0px;
+            top: 23.5%;
+            overflow: scroll;
+            padding-left:10px;
+            z-index: 5;
+            padding-right:5px;
+            transition:visibility ease-in-out 0.3s;
+            transition: opacity ease-in-out 0.3s;
+        }
+        /* more button */
+        input[type="checkbox"]:checked ~ .section-2 {
+            visibility: visible;
+            opacity: 1;
+        }
+        .list {
+            overflow: hidden;
+            height: auto;
+        }
+        .list-item {
+            background-color: #1a1e33;
+        }
+        /* hide section 2 scrollbar */
+        .section-2::-webkit-scrollbar {
+            display: none;
+        }
+        /* when the section 2 is hidden, section-1 width becomes 100% to cover the whole page */
+        .section-1 {
+            width: 100%;
+        }
+        /* jumbotron */
+        .jumbotron {
+            height: 30vw;
+        }
+        /* image in the jumbotron */
+        .jumbotron-image {
+            height: 30vw;
+            width: 30vw;
+        }
+        /* buttons and all */
+        .action-part p {
+            font-size: 2vw;
+        }
+        .btns > button {
+            height: 4vw;
+            width: 11vw;
+            font-size: 1.7vw;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        /* in the screens of this width, generally volume buttons are provided at the side. */
+        /* so there is no need for the volume slider at this width. so i have removed them from the display */
+        /* followers and author */
+        .followers,
+        .author {
+            font-size: 2vw;
+        }
+        /* jumbotron */
+        .jumbotron {
+            height: 36vw;
+            margin-bottom:15px;
+        }
+        /* image in the jumbotron */
+        .jumbotron-image {
+            height: 35vw;
+            width: 35vw;
+        }
+        /* heading of jumbotron */
+        .jumbotron h1{
+            font-size:larger;
+        }
+        /* jumbotron description */
+        .desc {
+            font-size: 1.8vw;
+        }
+        /* extra icons in the footer at the right hand side */
+        .extras > div:nth-child(3) {
+            display: none;
+        }
+        .extras > div:nth-child(4) {
+            display: none;
+        }
+        
+        /* aside1 playlist */
+        .left .play_head{
+        margin-top:8px;
+        font-size: 12px;
+        }
+        .left  p {
+            font-size: 10px;
+        }
+        .left{
+            width:60%;
+        }
+        /* header */
+        .mid_head{
+            width:38%;
+        }
+        .right_head {
+            width:100%;
+            margin-top:5px;
+            margin-left: -500px;
+        }
+        .right_head i{
+            margin-left:-10px;
+            margin-top:22px;
+        }
+        .right_head img{
+            margin-left:-38px;
+            top:19px;
+        }
+        .right_head input{
+            margin-right:-8px;
+        }
+        /* footer */
+        .active_song_description .song_desc div{
+            font-size:12px; 
+        }
+        .active_song_description {
+            padding-left:1px;
+        }
+        .active_song_description i{
+            display:none;
+        }
+    }
+    @media screen and (max-width: 550px) {
+        /* this is the most important media query */
+        /* navigation bar section */
+        /* website image */
+        .left_head img {
+            height: 30px ;
+            width: 30px;
+        }
+        /* website name */
+        .mid_head {
+            font-size: 3vw;
+        }
+        /* favourites */
+        .mid_head span {
+            font-size: 2vw;
+        }
+        /* notification bell */
+        .right_head i {
+            width: 20px;
+            height: 20px;
+        }
+        /* profile picture */
+        .right_head img {
+            width: 30px;
+            height: 30px;
+        }
+        /* notification bell and profile picture */
+        .right_head {
+            margin-top: 8px;
+        }
+        .song-name-main h1 {
+            font-size: 3vw;
+        }
+        /* followers and author */
+        .followers,
+        .author {
+            font-size: 3vw;
+        }
+        /* jumbotron description */
+        .desc {
+            font-size: 3vw;
+            padding-left: 4px;
+        }
+        /* buttons and all in the jumbotron */
+        .action-part {
+            padding-top: 0px;
+        }
+        /* jumbotron */
+        .jumbotron {
+            height: 73vw;
+            text-align: justify;
+        }
+        /* image in the jumbotron */
+        .jumbotron-image {
+            height: 70vw;
+            width: 85vw;
+            margin-left:-89px;
+        }
+        /* buttons and stuff */
+        .btns > button {
+            height: 10vw;
+            width: 19vw;
+            font-size: 3.2vw;
+        }
+    }

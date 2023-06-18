@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC PLAYER</title>
+    <!-- this is a link of styleheet index.css to this page -->
+    <link rel="stylesheet" href="index.css">
+    <!-- thhis is a link of font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- this is a link of animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- this is link of favicon -->
+    <link rel="icon" href="music_icon.png">
+</head>
+
+<body>
+    <header>   
+        <div class="left_head">
+            <img class="animate__heartBeat"src="music_icon.png" alt="music icon">
+        </div> 
+        <div class="mid_head">
+            Ninja<br><b>Studio</b><span>Favourites</span>
+        </div>
+        <div class="right_head">
+            <input type="text" class="sear" placeholder="Search" name="search">
+            <i class="fas fa-bell"></i>
+            <img src=" parmish verma.jpg">
+        </div>
+    </header>
+    <br><br><br>
+
+
+    <aside class="aside_box">
+        <!-- this is the aside heading part. the heading will be static -->
+        <div class="aside_head">
+            <h1>Playlist</h1>
+            <h3>
+                <a href="#queue_option_box">
+                    Queue 
+                    <i class="fas fa-chevron-circle-down"></i>
+                </a>
+            </h3>
+        </div>
+        <!-- this is the queue box which will be shown when the user clicks on the Queue button -->
+        <!-- it will have 3 options, playlists, favourite songs and Close button. it will close when one clicks on the close button. -->
+        <div class="queue_options" id="queue_option_box">
+            <p>
+                <a href style="color:#007bff; font-weight:bolder;">
+                    Playlists
+                </a>
+            </p>
+            <hr>
+            <p>
+                <a href style="color:#007bff; font-weight:bolder;">
+                    Favourite songs
+                </a>
+            </p>
+            <hr>
+            <p>
+                <a href="#" style="color:red; font-weight:bolder;">
+                    Close
+                </a>
+            </p>
+        </div>
+        <!-- this is the content of the playlist. it will be dynamic. -->
+        <div class="playlist_content">
+            <!-- first playlist item -->
+            <div class=playlist_item>
+                <div class="left_content">
+                    <div class="aside_index" style="margin-right:4px;">
+                        01
+                    </div>
+                    <div class="mid_content">
+                        <img src=" Bijlee_Bijlee.jpg">
+                    </div>
+                    <div>
+                        <div class="aside_song">
+                            She's One
+                        </div>
+                        <p class="aside_singer">
+                            Jerry
+                        </p>
+                    </div>
+                </div>
+                <div class="right_content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- second playlist item -->
+            <div class=playlist_item>
+                <div class="left_content">
+                    <div class="aside_index" style="margin-right:4px;">
+                        02
+                    </div>
+                    <div class="mid_content">
+                        <img src=" Massomiat.jfif">
+                    </div>
+                    <div>
+                        <div class="aside_song">
+                            Masoomiat
+                        </div>
+                        <p class="aside_singer">
+                            Satinder Sartaj
+                        </p>
+                    </div>
+                </div>
+                <div class="right_content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- third playlist item -->
+            <div class=playlist_item>
+                <div class="left_content">
+                    <div class="aside_index" style="margin-right:4px;">
+                        03
+                    </div>
+                    <div class="mid_content">
+                        <img src=" Jhanjhra.jpg">
+                    </div>
+                    <div>
+                        <div class="aside_song">
+                            Jhanjhra
+                        </div>
+                        <p class="aside_singer">
+                            Karan
+                        </p>
+                    </div>
+                </div>
+                <div class="right_content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- fourth playlist item -->
+            <div class=playlist_item>
+                <div class="left_content">
+                    <div class="aside_index" style="margin-right:4px;">
+                        04
+                    </div>
+                    <div class="mid_content">
+                        <img src=" Hasdi.jpg">
+                    </div>
+                    <div>
+                        <div class="aside_song">
+                            Hasdi
+                        </div>
+                        <p class="aside_singer">
+                            Karan Randhawa
+                        </p>
+                    </div>
+                </div>
+                <div class="right_content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- fifth playlist item -->
+            <div class=playlist_item>
+                <div class="left_content">
+                    <div class="aside_index" style="margin-right:4px;">
+                        05
+                    </div>
+                    <div class="mid_content">
+                        <img src=" Mohabbat.jpg">
+                    </div>
+                    <div>
+                        <div class="aside_song">
+                            Mohabbat
+                        </div>
+                        <p class="aside_singer">
+                            Kambi
+                        </p>
+                    </div>
+                </div>
+                <div class="right_content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- sixth playlist item -->
+            <div class=playlist_item>
+                <div class="left_content">
+                    <div class="aside_index" style="margin-right:4px;">
+                        06
+                    </div>
+                    <div class="mid_content">
+                        <img src=" Kaali_Raat.jpg">
+                    </div>
+                    <div>
+                        <div class="aside_song">
+                            Kaali Raat
+                        </div>
+                        <p class="aside_singer">
+                            Karan Randhawa
+                        </p>
+                    </div>
+                </div>
+                <div class="right_content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- seventh playlist item -->
+            <div class=playlist_item>
+                <div class="left_content">
+                    <div class="aside_index" style="margin-right:4px;">
+                        07
+                    </div>
+                    <div class="mid_content">
+                        <img src=" Time_Chakda.jpg">
+                    </div>
+                    <div>
+                        <div class="aside_song">
+                            Time Chakda
+                        </div>
+                        <p class="aside_singer">
+                            Nimrat Khaira
+                        </p>
+                    </div>
+                </div>
+                <div class="right_content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- eighth playlist item -->
+            <div class=playlist_item>
+                <div class="left_content">
+                    <div class="aside_index" style="margin-right:4px;">
+                        08
+                    </div>
+                    <div class="mid_content">
+                        <img src=" Hello_Life.jpg">
+                    </div>
+                    <div>
+                        <div class="aside_song">
+                            Hello Life
+                        </div>
+                        <p class="aside_singer">
+                           Aman Juleria
+                        </p>
+                    </div>
+                </div>
+                <div class="right_content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- ninth playlist item -->
+            <div class=playlist_item>
+                <div class="left_content">
+                    <div class="aside_index" style="margin-right:4px;">
+                        09
+                    </div>
+                    <div class="mid_content">
+                        <img src=" Debate.jpg">
+                    </div>
+                    <div>
+                        <div class="aside_song">
+                            Debate
+                        </div>
+                        <p class="aside_singer">
+                            Amar Sehmbi
+                        </p>
+                    </div>
+                </div>
+                <div class="right_content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- tenth playlist item -->
+            <div class=playlist_item>
+                <div class="left_content">
+                    <div class="aside_index" style="margin-right:4px;">
+                        10
+                    </div>
+                    <div class="mid_content">
+                        <img src=" Talda_Ni.jfif">
+                    </div>
+                    <div>
+                        <div class="aside_song">
+                            Talda Ni
+                        </div>
+                        <p class="aside_singer">
+                            Amar Sehmbi
+                        </p>
+                    </div>
+                </div>
+                <div class="right_content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- eleventh playlist item -->
+            <div class=playlist_item>
+                <div class="left_content">
+                    <div class="aside_index" style="margin-right:4px;">
+                        11
+                    </div>
+                    <div class="mid_content">
+                        <img src=" Bijlee_Bijlee.jpg">
+                    </div>
+                    <div>
+                        <div class="aside_song">
+                            Bijlee Bijlee
+                        </div>
+                        <p class="aside_singer">
+                            Hardy Sandhu
+                        </p>
+                    </div>
+                </div>
+                <div class="right_content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+            <!-- twelfth playlist item -->
+            <div class=playlist_item>
+                <div class="left_content">
+                    <div class="aside_index" style="margin-right:4px;">
+                        12
+                    </div>
+                    <div class="mid_content">
+                        <img src=" One_Life.jpg">
+                        
+                    </div>
+                    <div>
+                        <div class="aside_song">
+                            One Life
+                        </div>
+                        <p class="aside_singer">
+                            Pardeep Dhaka
+                        </p>
+                    </div>
+                </div>
+                <div class="right_content">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <br>
+    
+    <main>
+        <section class="new_releases">
+            <img id="n" src="bg.png">
+            <img id="e" src="mark.jpeg">
+            <img id="w" src="bg.png">
+        </section>
+
+
+        <section class="latest_release">
+            <p>Latest Release</p>
+            <div class="top_picks">
+                <div class="release">
+                    <img src=" P_Verma.jpg">
+                    <p><span>Parmish Verma</span><br><span>MAR 3,2021</span></p>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="release">
+                    <img src=" I_Sharma.png">
+                    <p><span>Isha Sharma</span><br><span>DEC 21,2021</span></p>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="release">
+                    <img src=" N_Kakkar.jpg">
+                    <p><span>Neha Kakkar</span><br><span>AUG 11,2021</span></p>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="release">
+                    <img src=" P_Dhillon.jpg">
+                    <p><span>Prem Dhillon</span><br><span>SEP 17,2021</span></p>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="popular_artists">
+            <p>Popular Artists</p>
+            <div class="artist">
+                <div class="Jassi">
+                    <img src=" J_Gill.jpg">
+                    <div class="Gill">
+                        <p>Jassi<br> Gill</p>
+                    </div>
+                </div>
+                <div class="Satinder">
+                    <img src=" S_Sartaj.jfif">
+                    <div class="Sartaj">
+                        <p>Satinder Sartaj</p>
+                    </div>
+                </div>
+                <div class="Nimrat">
+                    <img src=" N_Khaira.jfif">
+                    <div class="Khaira">
+                        <p>Nimrat Khaira</p>
+                    </div>
+                </div>
+                <div class="Guru">
+                    <img src=" G_Randhawa.webp">
+                    <div class="Randhawa">
+                        <p>Guru Randhawa</p>
+                    </div>
+                </div>
+                <div class="Ammy">
+                    <img src=" A_Virk.jpg">
+                    <div class="Virk">
+                        <p>Ammy Virk</p>
+                    </div>
+                </div>
+            </div>    
+        </section> 
+
+
+        <section class="music_station">
+            <a href="single playlist screen.html"><img class="station" src="Music_station.png"></a>
+            <div class="love_s">
+                <img class="circle" src="love.jpg">
+                <div class="love">
+                    <p>Love</p>
+                </div>
+            </div>
+            <div class="retro_s">
+                <img class="circle" src="retro.jpg">
+                <div class="retro">
+                    <p>Retro</p>
+                </div>
+            </div>
+            <div class="chill_s">
+                <img class="circle"  src="chill.jpg">
+                <div class="chill">
+                    <p>Chill</p>
+                </div>
+            </div>
+            <div class="workout_s">
+                <img class="circle" src="workout.jpg">
+                <div class="workout">
+                    <p>Workout</p>
+                </div>
+            </div>
+            <div class="rock_s">
+                <img class="circle" src="rock.jpg">
+                <div class="rock">
+                    <p>Rock</p>
+                </div>
+            </div>
+            <div class="pop_s">
+                <img class="circle" src="pops.jpg">
+                <div class="pop">
+                    <p>Pop</p>
+                </div>
+            </div>
+        </section>  
+        
+
+
+        <section class="threes">
+            <div class="one">
+                <img src=" electronic.png">
+                <div class="electronic">
+                    <p>Electronics</p>
+                </div>
+            </div>
+            <div class="two">
+                <img src=" party2.jpg">
+                <div class="party">
+                    <p>Party</p>
+                </div>
+            </div>
+            <div class="three">
+                <img src=" road_trip.jpg">
+                <div class="road_trip">
+                    <p>Road Trips</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="English">
+            <p>Latest English</p>
+            <div class="sargam">
+                <div class="sar1">
+                    <img src=" Believer.jpg">
+                    <div class="gam1">
+                    <p>
+                        <span>Believer</span>
+                        <br>
+                        Mar 11,2021
+                    </p>
+                    </div>
+                </div>
+                <div class="sar2">
+                    <img src=" Girls_Like_You.jpg">
+                    <div class="gam2">
+                    <p>
+                        <span>Girls Like</span>
+                        <br>
+                        Dec 5,2021
+                    </p>
+                    </div>
+                </div>
+                <div class="sar3">
+                    <img src=" Kaali_Raat.jpg">
+                    <div class="gam3">
+                    <p>
+                        <span>We Can't</span>
+                        <br>
+                        Oct 26,2021</p>
+                    </div>
+                </div>
+                <div class="sar4">
+                    <img src=" Grenade.jfif">
+                    <div class="gam4">
+                    <p>
+                        <span>Grenade</span>
+                        <br>
+                        Nov 7,2021</p>
+                    </div>
+                </div>
+                <div class="sar5">
+                    <img src=" Sorry_Not_Sorry.png">
+                    <div class="gam5">
+                    <p>
+                        <span>Not Sorry</span>
+                        <br>
+                        Aug 12,2021</p>
+                    </div>
+                </div>
+                <div class="sar6">
+                    <img src=" Without_Me.jpg">
+                    <div class="gam6">
+                    <p>
+                        <span>Without U</span>
+                        <br>
+                        Jan 2,2021
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="English">
+            <div class="margin">
+            <p>Latest Punjabi</p>
+            <div class="sargam">
+                <div class="sar1">
+                    <img src=" Excuses.jpg">
+                    <div class="gam1">
+                        <p>
+                            <span>Excuses</span>
+                            <br>
+                            Dec 12,2021
+                        </p>
+                    </div>
+                </div>
+                <div class="sar1">
+                    <img src=" Hor_Koi_Na.jfif">
+                    <div class="gam1">
+                        <p>
+                            <span>Hor Koi Na</span>
+                            <br>
+                            Dec 12,2021
+                        </p>
+                    </div>
+                </div>    
+                <div class="sar1 med">
+                    <img src=" Just_A_Dream.jpg">
+                    <div class="gam1">
+                        <p>
+                            <span>Just Dream</span>
+                            <br>
+                            Dec 12,2021
+                        </p>
+                    </div>
+                </div>
+                <div class="sar1">
+                    <img src=" Schedule.jpg">
+                    <div class="gam1">
+                        <p>
+                            <span>Schedule</span>
+                            <br>
+                            Dec 12,2021
+                        </p>
+                    </div>
+                </div>
+                <div class="sar1">
+                    <img src=" Bijlee_Bijlee.jpg">
+                    <div class="gam1">
+                        <p>
+                            <span>She's One</span>
+                            <br>
+                            Dec 12,2021
+                        </p>
+                    </div>
+                </div>
+                <div class="sar1 med">
+                    <img src=" Into_You.jpg">
+                    <div class="gam1">
+                        <p>
+                            <span>Into You</span>
+                            <br>
+                            Dec 12,2021
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <br><br> 
+    </main>
+
+
+    <!-- this is the footer part. -->
+    <!-- its position will be fixed to the screen bottom. -->
+    <footer>
+        <div class="active_song_description">
+            <!-- song image -->
+            <div id="song_image">
+                <img src=" Jhanjhra.jpg">
+            </div>
+            <!-- song name and author -->
+            <div class="song_desc">
+                <div>
+                    Jhanjhra by Karan
+                </div>
+                <div>
+                    Karan Randhawa
+                </div>
+                <!-- heart icon and ban icon -->
+            </div>
+            <div class="heart_and_ban_icon">
+                <span>
+                    <i class="far fa-heart"></i>
+                </span>
+                <span>
+                    <i class="fas fa-ban"></i>
+                </span>
+            </div>
+        </div>
+        <!-- these are the main player controls -->
+        <div class="player">
+            <div class="controls">
+                <div><i class="fas fa-random"></i></div>
+                <div><i class="fas fa-step-backward"></i></div>
+                <div><i class="fas fa-pause-circle"></i></div>
+                <div><i class="fas fa-step-forward"></i></div>
+                <div><i class="fas fa-redo"></i></div>
+            </div>
+            <!-- this is the slider -->
+            <div id="slider">
+                <!-- current time -->
+                <div class="time">
+                    1:39
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="100" value="10" class="slider" id="myRange">
+                </div>
+                <!-- total time -->
+                <div class="time">
+                    4:44
+                </div>
+            </div>
+        </div>
+        <!-- other icons including the volume slider and all -->
+        <div class="extras">
+            <div>
+                <i class="fas fa-list-ul"></i>
+            </div>
+            <div>
+                <i class="fas fa-laptop"></i>
+            </div>
+            <div>
+                <i class="fas fa-volume-up"></i>
+            </div>
+            <div class="slidecontainer" style="width:30%;">
+                <input type="range" min="0" max="100" value="0" class="slider" id="myRange" style="margin-top:0px;">
+            </div>
+            <div>
+                <i class="fas fa-expand-alt"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
